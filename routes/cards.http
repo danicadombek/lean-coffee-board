@@ -28,7 +28,7 @@ Content-Type: application/json
 {
   "title": "Frage",
   "author": "Herr Fragensteller",
-  "votes": "3"
+  "votes": "4"
 }
 
 ### DELETE /api/cards/1
