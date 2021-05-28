@@ -1,18 +1,12 @@
-const http = require('http')
+const express = require('express')
 
-const server = http.createServer(onRequest)
-server.listen(4000)
+// express likes to call the server "app"
+const app = express()
 
-function onRequest(req, res) {
-  if (req.url === '/') {
-    res.end(`Please visit /users to get user data.`)
-  }
+app.use('/', express.json()) // add middleware for json data
+app.use('/api/users', require('./routes/users'))
+app.use(require('./routes/error'))
 
-  if (req.url === '/users') {
-    const users = [
-      { name: 'Jane Doe', age: 32, email: 'jane@doe.com' },
-      { name: 'John Doe', age: 31, email: 'john@doe.com' },
-    ]
-    res.end(JSON.stringify(users))
-  }
-}
+app.listen(4000, () => {
+  console.log(`Server started at http://localhost:4000`)
+})
