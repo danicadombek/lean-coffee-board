@@ -23,14 +23,14 @@ router.get('/', (req, res, next) => {
 
 router.get('/:id', (req, res, next) => {
   const { id } = req.params
-  const foundCards = cards.find(card => card.id === id)
-  foundCards ? res.json(foundCards) : next()
+  const foundCard = cards.find(card => card.id === id)
+  foundCard ? res.json(foundCard) : next()
 })
 
 router.post('/', (req, res, next) => {
-  const newCards = { ...req.body, id: uuidv4() }
-  cards.push(newCards)
-  res.status(201).json(newCards)
+  const newCard = { ...req.body, id: uuidv4() }
+  cards.push(newCard)
+  res.status(201).json(newCard)
 })
 
 router.patch('/:id', (req, res, next) => {
@@ -38,9 +38,9 @@ router.patch('/:id', (req, res, next) => {
 
   const index = cards.findIndex(card => card.id === id)
   const card = cards[index]
-  const updatedCards = { ...card, ...req.body }
-  cards.splice(index, 1, updatedCards)
-  res.json(updatedCards)
+  const updatedCard = { ...card, ...req.body }
+  cards.splice(index, 1, updatedCard)
+  res.json(updatedCard)
 })
 
 router.delete('/id', (req, res, next) => {
@@ -49,4 +49,4 @@ router.delete('/id', (req, res, next) => {
   res.sendStatus(204)
 })
 
-module.export = router
+module.exports = router
