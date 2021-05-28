@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const userSchema = {
   name: { type: String, required: true },
-  age: { type: Number, required: true },
+  age: { type: Number, required: true, min: 15 },
   email: {
     type: String,
     required: true,
