@@ -2,8 +2,7 @@
   "name": "lean-coffee-board",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js ",
     "create-user": "node create-user.js 'Test User' 99 'test@testuser.com'",
