@@ -19,6 +19,7 @@ Content-Type: application/json
 {
   "title": "Frage",
   "author": "Herr Fragensteller",
+  "votes": "4"
 }
 
 ### PATCH /api/cards/1
