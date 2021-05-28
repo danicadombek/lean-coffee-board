@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon server.js ",
     "create-user": "node create-user.js 'Test User' 99 'test@testuser.com'",
