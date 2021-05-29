@@ -17,9 +17,9 @@ POST http://localhost:4000/api/cards
 Content-Type: application/json
 
 {
-  "title": "Frage",
+  "text": "Frage",
   "author": "Herr Fragensteller",
-  "votes": "2",
+  "votes": ""
 }
 
 ### PATCH /api/cards/1
