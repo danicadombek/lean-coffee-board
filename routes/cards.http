@@ -19,7 +19,7 @@ Content-Type: application/json
 {
   "title": "Frage",
   "author": "Herr Fragensteller",
-  "votes": "4"
+  "votes": "2",
 }
 
 ### PATCH /api/cards/1
@@ -27,9 +27,7 @@ PATCH {{baseUrl}}/api/cards/1
 Content-Type: application/json
 
 {
-  "title": "Frage",
-  "author": "Herr Fragensteller",
-  "votes": "4"
+"text": "How are you?"
 }
 
 ### DELETE /api/cards/1
